@@ -14,6 +14,7 @@ class variety {
     uint8_t id;
     string name;
     float average;
+    string key;
 
 public:
     variety() {
@@ -28,23 +29,11 @@ public:
         average = 0.0f;
     }
 
-    void print() {
-        cout << " - var " << name;
+    string get_key() const {
+        return key;
     }
 
     static uint8_t count;
-
-    bool operator==(const variety &rhs) const;
-
-    bool operator!=(const variety &rhs) const;
-
-    bool operator<(const variety &rhs) const;
-
-    bool operator>(const variety &rhs) const;
-
-    bool operator<=(const variety &rhs) const;
-
-    bool operator>=(const variety &rhs) const;
 };
 
 #endif //OBJECTS_VARIETY_H
