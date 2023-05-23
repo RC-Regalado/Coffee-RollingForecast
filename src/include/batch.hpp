@@ -27,6 +27,8 @@ public:
     void add_maintenance(maintenance::maintenance* _m, int year);
     void set_variety(const variety& v, float _area) ;
     variety get_variety() const;
+
+    float calc_production(int year);
 };
 
 class batch {

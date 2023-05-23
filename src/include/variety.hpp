@@ -7,31 +7,22 @@
 #include <iostream>
 #include <cstdint>
 #include <string>
-
+#include <vector>
 using namespace std;
 
 class variety {
     uint8_t id;
     string name;
-    float average;
+    vector<float>* production;
     string key;
 
 public:
-    variety() {
-        id = count++;
-        name = "no set";
-        average = 0.0f;
-    }
+    variety();
+    variety(int len, string name, float _prod[]);
 
-    explicit variety(string name) {
-        id = count++;
-        this->name = std::move(name);
-        average = 0.0f;
-    }
-
-    string get_key() const {
-        return key;
-    }
+    string get_key() const;
+    float at(int year);
+    void set_production(int year, float production);
 
     static uint8_t count;
 };

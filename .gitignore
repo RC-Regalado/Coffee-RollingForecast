@@ -57,3 +57,6 @@ _deps
 build/*
 *.csv
 .cache/*
+
+# For session saving
+.nvim

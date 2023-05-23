@@ -1,3 +1,4 @@
+#include "utils.hpp"
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -5,7 +6,5 @@
 
 using namespace std;
 
+int current_year;
 
-int main() {
-    return 0;
-}

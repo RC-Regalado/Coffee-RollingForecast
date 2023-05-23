@@ -46,4 +46,8 @@ void sub_batch::set_variety(const variety &v, float _area) {
 variety sub_batch::get_variety() const {
   return var;
 }
+
+float sub_batch::calc_production(int year){
+  return var.at(year) * poblation;
+}
 // }}}
