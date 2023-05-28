@@ -4,30 +4,31 @@
 
 #include "variety.hpp"
 #include "utils.hpp"
+#include <algorithm>
+#include <iterator>
 
 uint8_t variety::count = 0;
 
 variety::variety() {
   id = count++;
-  name = "no set";
-  production = nullptr;
+  name = "Test Implementation";
 }
 
 variety::variety(int len, string name, float _prod[]) {
   id = count++;
   this->len = len;
   this->name = std::move(name);
-  this->production = new float[len];
 
-  for (int i=0; i < len; i++)
-    this->production[i] = _prod[i];
+  {
+    this->production.reserve(production.size() + len );
+    copy(&_prod[0], &_prod[len], back_inserter(this->production));
+  }
 }
 variety::~variety(){
-  delete [] production;
 }
 
 string variety::get_key() const { return key; }
 
 float variety::at(int year){
-  return production[current_year - year];
+  return this->production[current_year - year];
 }

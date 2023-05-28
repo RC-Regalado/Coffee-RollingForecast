@@ -1,9 +1,5 @@
-//
-// Created by rc-regalado on 07-25-22.
-//
-
-#ifndef OBJECTS_TABLON_H
-#define OBJECTS_TABLON_H
+#ifndef OBJECTS_BATCH_H
+#define OBJECTS_BATCH_H
 #include <iostream>
 #include <cstdint>
 #include <string>
@@ -55,4 +51,4 @@ public:
 
 
 
-#endif //OBJECTS_TABLON_H
+#endif

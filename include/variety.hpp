@@ -15,7 +15,7 @@ class variety {
 
     int len;
     string name;
-    float* production;
+    vector<float> production;
     string key;
 
 public:

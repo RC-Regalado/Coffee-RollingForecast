@@ -2,8 +2,8 @@
 // Created by rc-regalado on 07-25-22.
 //
 
-#ifndef OBJECTS_FINCA_H
-#define OBJECTS_FINCA_H
+#ifndef OBJECTS_FARM_H
+#define OBJECTS_FARM_H
 #include <iostream>
 #include <cstdint>
 #include <vector>
@@ -31,4 +31,4 @@ public:
     batch get(string key);
 };
 
-#endif //OBJECTS_FINCA_H
+#endif
