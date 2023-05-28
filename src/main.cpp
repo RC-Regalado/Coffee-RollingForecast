@@ -6,5 +6,5 @@
 
 using namespace std;
 
-int current_year;
+int current_year = 2023;
 

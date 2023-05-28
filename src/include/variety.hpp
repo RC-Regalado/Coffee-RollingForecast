@@ -12,13 +12,16 @@ using namespace std;
 
 class variety {
     uint8_t id;
+
+    int len;
     string name;
-    vector<float>* production;
+    float* production;
     string key;
 
 public:
     variety();
     variety(int len, string name, float _prod[]);
+    ~variety();
 
     string get_key() const;
     float at(int year);

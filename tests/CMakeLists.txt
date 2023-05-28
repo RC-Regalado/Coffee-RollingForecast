@@ -18,3 +18,8 @@ target_link_libraries(rf_test
 
 add_test(rf_gtests rf_test)
 
+set_tests_properties(
+  rf_gtests
+  PROPERTIES
+  ENVIRONMENT "GDB=/bin/gdb"
+)

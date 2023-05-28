@@ -15,13 +15,19 @@ variety::variety() {
 
 variety::variety(int len, string name, float _prod[]) {
   id = count++;
+  this->len = len;
   this->name = std::move(name);
-  production = new vector<float>();
+  this->production = new float[len];
 
+  for (int i=0; i < len; i++)
+    this->production[i] = _prod[i];
+}
+variety::~variety(){
+  delete [] production;
 }
 
 string variety::get_key() const { return key; }
 
 float variety::at(int year){
-  return production->at(current_year - year);
+  return production[current_year - year];
 }
